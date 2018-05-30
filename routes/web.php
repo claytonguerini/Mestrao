@@ -21,10 +21,15 @@ Auth::routes();
 Route::get('/', ['as'=>'home', 'uses'=>'Site\HomeController@index']);
 Route::get('/hotel', ['as'=>'site.hotel', 'uses'=>'Site\ConteudoController@pousada']);
 Route::get('/tarifarios', ['as'=>'site.tarifarios', 'uses'=>'Site\ConteudoController@tarifarios']);
-Route::get('/roteiros', ['as'=>'site.roteiros', 'uses'=>'Site\roteirosController@index']);
+
+Route::get('/roteiros', ['as'=>'site.roteiros', 'uses'=>'Site\RoteirosController@index']);
+Route::post('/roteiros', ['as'=>'site.roteiros.calcula', 'uses'=>'Site\RoteirosController@calcula']);
+
 Route::get('/passeios', ['as'=>'site.passeios', 'uses'=>'Site\PasseiosController@index']);
+Route::get('/passeios/{id}', ['as'=>'site.passeiosDetalhes', 'uses'=>'Site\PasseiosController@detalhes']);
 Route::get('/contato', ['as'=>'site.contato', 'uses'=>'Site\ContatosController@index']);
 Route::post('/contato', ['as'=>'site.contato.envia', 'uses'=>'Site\ContatosController@envia']);
+
 
 
 
@@ -78,6 +83,12 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('/admin/roteiros/altatemporada/editar/{id}', ['as'=>'admin.roteiros.altatemporada.editar', 'uses'=>'Admin\Roteiros\AltaTemporadaController@editar']);
     Route::get('/admin/roteiros/altatemporada/excluir/{id}', ['as'=>'admin.roteiros.altatemporada.excluir', 'uses'=>'Admin\Roteiros\AltaTemporadaController@excluir']);
     
+    Route::get('/admin/roteiros/recebidos', ['as'=>'admin.roteiros.listar', 'uses'=>'Admin\Roteiros\RoteirosController@index']);
+    Route::get('/admin/roteiros/exibir/{id}', ['as'=>'admin.roteiros.exibir', 'uses'=>'Admin\Roteiros\RoteirosController@exibir']);
+    
+    /// ROTAS CONTATOS
+    Route::get('/admin/contatos', ['as'=>'admin.contatos.listar', 'uses'=>'Admin\Contatos\ContatosController@index']);
+    Route::get('/admin/contatos/exibir/{id}', ['as'=>'admin.contatos.exibir', 'uses'=>'Admin\Contatos\ContatosController@exibir']);
     
     Route::get('/register', 'Auth\RegisterController@index')->name('register');
     

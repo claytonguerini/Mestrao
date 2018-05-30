@@ -20,3 +20,13 @@
         <![endif]-->
         <!-- Modernizr js -->
         <script src="{{ asset('assets/js/modernizr.min.js')}} "></script>
+        
+        <!--Form Wizard-->
+        <link rel="stylesheet" type="text/css" href="{{asset('assets/plugins/smartwizard/dist/css/smart_wizard.css')}}" />
+        
+                <!-- Plugins css -->
+    <link href="{{asset('assets/plugins/timepicker/bootstrap-timepicker.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/plugins/mjolnic-bootstrap-colorpicker/css/bootstrap-colorpicker.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/plugins/clockpicker/bootstrap-clockpicker.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/plugins/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet">

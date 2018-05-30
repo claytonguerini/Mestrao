@@ -14,10 +14,10 @@
         </div>
 
         <div class="statistics-item">
-            <a none="{{route('site.roteiros')}}" style="color: #717171">ROTEIROS</a>
+            <a href="{{route('site.roteiros')}}" style="color: #717171">ROTEIROS</a>
         </div>
         <div class="statistics-item">
-            <a none="{{route('site.passeios')}}" style="color: #717171">PASSEIOS</a>
+            <a href="{{route('site.passeios')}}" style="color: #717171">PASSEIOS</a>
         </div>
         <div class="statistics-item">
             <a href="{{route('site.contato')}}" style="color: #717171">CONTATO</a>

@@ -39,8 +39,8 @@
                     <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-email"></i>
                         <span> Contatos Recebidos </span> <span class="menu-arrow"></span></a>
                     <ul class="list-unstyled">
-                        <li><a href="ui-buttons.php">Contatos Recebidos</a></li>
-                        <li><a href="ui-cards.php">Roteiros Recebidos</a></li>
+                        <li><a href="{{route('admin.contatos.listar')}}">Contatos Recebidos</a></li>
+                        <li><a href="{{route('admin.roteiros.listar')}}">Roteiros Recebidos</a></li>
                     </ul>
                 </li>
 

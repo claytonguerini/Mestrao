@@ -180,6 +180,7 @@
     })(document);
     smartlook('init', 'ef604f2af93e8f2e8e9dad1def7d328ce6956d3e');
 </script>
+ <script type="text/javascript" src="https://www.ipchat.com.br/sistema/whats-chat-2-0/widget-init.php?end_code=6UE1DANXR0SMQLP4YTI25BKWF3HOCVGZ978J20170821174932"></script>
 </head>
 <body class="home" id="page">
     <!-- FACEBOOK -->

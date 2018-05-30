@@ -18,12 +18,14 @@ class ContatosController extends Controller
     public function envia(Request $req) {
         $dados = $req->all();
         
-        //Contatos::create($dados);
+        Contatos::create($dados);
         
         Mail::send('site.canais.contatoMail', $dados, function($message){
 
-            $message->to('clayton.guerini@gmail.com');
+            //$message->to('clayton.guerini@gmail.com');
+            $message->to('reservas@pousadacaranda.com.br');
             $message->subject('Contato Hotel Caranda Eco Ville');
+            $message->from('sender@pousadacaranda.com.br','Carandá Eco Ville');
             
         });
          

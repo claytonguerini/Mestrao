@@ -7,7 +7,7 @@
       <header class="main-header">
          <div class="container">
             <div class="header-content">
-               <a href="index.html">
+               <a href="#">
                   <img src="{{asset('site/img/logo.png')}}" alt="site identity" />
                </a>
 
